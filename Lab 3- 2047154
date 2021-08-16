@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head> </head>
+<img src="https://www.musicstores.in/img/musicstores-logo-1537782218.jpg"><br><br>
+<h1>Log in to Music Stores</h1>
+<body background="https://www.liveabout.com/thmb/pwO4o_iDrZRTmmhs7eOfD25Qoqw=/1500x1125/smart/filters:no_upscale()/pop-music-57bce3863df78c87634ea806.jpg">
+      	<h3><label for="email"><b>Email</b></label><br>
+     	<input type="text" placeholder="Enter email address" name="email" required>	<br>
+	<label for="psw"><b>Password</b></label><br>
+	<input type="password" placeholder="Enter Password" name="psw" required><br></h3>
+</body>
+</html>
+
+
+//New html file
+
+<!DOCTYPE html>
+<html>
+<body background="https://library.neura.edu.au/wp-content/uploads/sites/3/2017/01/Music-800x425.jpg">
+<h1>MUSIC STORES</h1>
+<form action="https://www.musicstores.in/">
+  <h3><label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname"><br>
+  <label for="birthday">Birthday:</label><br>
+  <input type="date" id="birthday" name="birthday"><br><br></h3>
+  <h2>CATEGORIES</h2>
+  <input type="radio" id="keyboards" name="categories" value="KEYBOARDS">
+  <label for="keyboards">KEYBOARDS</label><br>
+  <input type="radio" id="pianos" name="categories" value="PIANOS">
+  <label for="pianos">PIANOS</label><br>
+  <input type="radio" id="guitars" name="categories" value="GUITARS">
+  <label for="guitars">GUITARS</label><br>
+  <input type="radio" id="drums" name="categories" value="DRUMS">
+  <label for="drums">DRUMS</label><br><br>
+  <h2>TOP BRANDS</h2>
+  <input type="checkbox" id="brand" name="Brand" value="Yamaha">
+  <label for="brand">Yamaha</label><br>
+  <input type="checkbox" id="brand" name="Brand" value="Boss">
+  <label for="brand">Boss</label><br>
+  <input type="checkbox" id="brand" name="Brand" value="Korg">
+  <label for="brand">Korg</label><br>
+  <input type="checkbox" id="brand" name="Brand" value="Hercules">
+  <label for="brand">Hercules</label><br>
+  <a href="https://www.musicstores.in/brands">view all</a><br><br>
+  <h2>OUR COMPANY</h2>
+  <label for="select">select:</label>
+  <select id="our company" name="our company">
+    <option value="shipping & returns">Shipping & Returns</option>
+    <option value="privacy policy">Privacy Policy</option>
+    <option value="about us">About Us</option>
+    <option value="payment methods">Payment Methods</option>
+  </select><br><br>
+  <a href="https://www.musicstores.in/contact-us">For any query contact us</a><br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+<p>If you click the "Submit" button, the form-data will be sent to a page called "https://www.musicstores.in/".</p>
+
+</body>
+</html>
