@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
 <body background="https://www.liveabout.com/thmb/pwO4o_iDrZRTmmhs7eOfD25Qoqw=/1500x1125/smart/filters:no_upscale()/pop-music-57bce3863df78c87634ea806.jpg">
+<center>
+	<br><img src="https://betamusicgroup.net/wp-content/uploads/2020/09/Music-Between-Us-1.jpg" width="600" height="400" align="right">
+</center>
 <h1>MUSIC STORES</h1>
+	
 <form action="https://www.musicstores.in/">
 
   <h3><label for="fname">First name:</label>
@@ -10,9 +14,9 @@
   <input type="text" id="lname" name="lname"><br>
 
   <h3><label for="email"><b>Email:</b></label>
-  <input type="text" name="email" required><br><br>
+  <input type="text" name="email"><br><br>
   <label for="psw"><b>Password:</b></label>
-  <input type="password" name="psw" required><br></h3>
+  <input type="password" name="psw"><br></h3>
 
   <label for="birthday">Birthday:</label><br>
   <input type="date" id="birthday" name="birthday"><br><br></h3>
@@ -49,7 +53,7 @@
   <input type="submit" value="Submit">
 </form> 
 
-<p style="color:purple;">If you click the "Submit" button, the form-data will be sent to a page called "https://www.musicstores.in/".</p>
+<p style="color:purple;">If you click the "Submit" button, the page will redirect to "https://www.musicstores.in/"</p>
 
 </body>
 </html>
