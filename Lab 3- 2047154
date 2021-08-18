@@ -1,3 +1,25 @@
+<!doctype html>
+<html>
+<head> </head>
+<img src="https://www.musicstores.in/img/musicstores-logo-1537782218.jpg"><br><br>
+<h1>Log in to Music Stores</h1>
+<body background="https://www.liveabout.com/thmb/pwO4o_iDrZRTmmhs7eOfD25Qoqw=/1500x1125/smart/filters:no_upscale()/pop-music-57bce3863df78c87634ea806.jpg">
+
+<form action="E:\2047154.html" method="post">
+      	<h3><label for="email"><b>Email</b></label><br>
+
+     	<input type="text" name="email" required>	<br>
+	<label for="psw"><b>Password</b></label><br>
+	<input type="password" name="psw" required><br></h3>
+
+	<input type="submit" value="Login">
+</form>
+
+</body>
+</html>
+
+
+
 <!DOCTYPE html>
 <html>
 <body background="https://www.liveabout.com/thmb/pwO4o_iDrZRTmmhs7eOfD25Qoqw=/1500x1125/smart/filters:no_upscale()/pop-music-57bce3863df78c87634ea806.jpg">
@@ -43,11 +65,11 @@
 
   <h2>OUR COMPANY</h2>
   <label for="select">select:</label>
-  <select id="our company" name="our company">
-    <option value="shipping & returns"selected>Shipping & Returns</option>
-    <option value="privacy policy">Privacy Policy</option>
-    <option value="about us">About Us</option>
-    <option value="payment methods">Payment Methods</option>
+  <select id="our company" name="our company" onChange="window.location.href=this.value">
+    <option value="https://www.musicstores.in/content/1-delivery"selected>Shipping & Returns</option>
+    <option value="https://www.musicstores.in/content/2-legal-notice">Privacy Policy</option>
+    <option value="https://www.musicstores.in/content/4-about-us">About Us</option>
+    <option value="https://www.musicstores.in/content/5-secure-payment">Payment Methods</option>
   </select><br><br>
   <a href="https://www.musicstores.in/contact-us">For any query contact us</a><br><br>
   <input type="submit" value="Submit">
