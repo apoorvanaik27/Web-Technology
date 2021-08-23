@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head> </head>
+<img src="https://www.musicstores.in/img/musicstores-logo-1537782218.jpg"><br><br>
+<h1>Log in to Music Stores</h1>
+<body background="https://www.liveabout.com/thmb/pwO4o_iDrZRTmmhs7eOfD25Qoqw=/1500x1125/smart/filters:no_upscale()/pop-music-57bce3863df78c87634ea806.jpg">
+
+<form action="C:\Users\ADMIN\OneDrive\Documents\Web technology\Lab 4\Lab 4- 2047154.html" method="post">
+      	<h3><label for="email"><b>Email</b></label><br>
+
+     	<input type="text" name="email" required>	<br>
+	<label for="psw"><b>Password</b></label><br>
+	<input type="password" name="psw" required><br></h3>
+
+	<input type="submit" value="Login">
+</form>
+
+</body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<body background="https://www.liveabout.com/thmb/pwO4o_iDrZRTmmhs7eOfD25Qoqw=/1500x1125/smart/filters:no_upscale()/pop-music-57bce3863df78c87634ea806.jpg">
+<center>
+	<br><img src="https://www.indcareer.com/files/%20Music.jpg" width="600" height="400" align="right">
+</center>
+<h1>MUSIC STORES</h1>
+	<audio controls>
+  	<source src="C:\Users\ADMIN\OneDrive\Documents\Web technology\Lab 4\pani.ogg" type="audio/ogg">
+  	<source src="C:\Users\ADMIN\OneDrive\Documents\Web technology\Lab 4\pani.mp3" type="audio/mpeg">
+	Your browser does not support the audio element.
+	</audio>
+
+	
+	<video width="320" height="240" controls>
+ 	 <source src="C:\Users\ADMIN\OneDrive\Documents\Web technology\Lab 4\videopani.mp4" type="video/mp4">
+ 	 <source src="C:\Users\ADMIN\OneDrive\Documents\Web technology\Lab 4\videopani.ogg" type="video/ogg">
+ 	 Your browser does not support the video tag.
+	</video>
+
+
+<div style="text-align:center"> 
+  <button onclick="playPause()">Play/Pause</button> 
+  <button onclick="makeBig()">Big</button>
+  <button onclick="makeSmall()">Small</button>
+  <button onclick="makeNormal()">Normal</button>
+  <br><br>
+  <video id="video1" width="420">
+    <source src="mov_bbb.mp4" type="video/mp4">
+    <source src="mov_bbb.ogg" type="video/ogg">
+    Your browser does not support HTML video.
+  </video>
+</div> 
+
+
+<script> 
+var myVideo = document.getElementById("video1"); 
+
+function playPause() { 
+  if (myVideo.paused) 
+    myVideo.play(); 
+  else 
+    myVideo.pause(); 
+} 
+
+function makeBig() { 
+    myVideo.width = 560; 
+} 
+
+function makeSmall() { 
+    myVideo.width = 320; 
+} 
+
+function makeNormal() { 
+    myVideo.width = 420; 
+} 
+</script> 
+
+
+</body>
+</html>
