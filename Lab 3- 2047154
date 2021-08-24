@@ -22,47 +22,99 @@
 
 <!DOCTYPE html>
 <html>
+
+<STYLE>
+div.mus {
+  padding-right: 85px;
+}
+</STYLE>
+
+
 <body background="https://www.liveabout.com/thmb/pwO4o_iDrZRTmmhs7eOfD25Qoqw=/1500x1125/smart/filters:no_upscale()/pop-music-57bce3863df78c87634ea806.jpg">
+
 <center>
-	<br><img src="https://www.indcareer.com/files/%20Music.jpg" width="600" height="400" align="right">
-</center>
+	
 <h1>MUSIC STORES</h1>
 	
+<audio controls>
+  	<source src="C:\Users\ADMIN\OneDrive\Documents\Web technology\Lab 4\pani.ogg" type="audio/ogg">
+  	<source src="C:\Users\ADMIN\OneDrive\Documents\Web technology\Lab 4\pani.mp3" type="audio/mpeg">
+	Your browser does not support the audio element.
+	</audio>
+
+<embed type="image/jpg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyter7e_z9SpYOLrgdVJ09IdQ4vV3NYKlaXg&usqp=CAU" width="600" height="300" align="right">
+	
+<BR><BR>
+<video width="400" controls>
+  <source src="C:\Users\ADMIN\OneDrive\Documents\Web technology\Lab 4\videopani.mp4" type="video/mp4">
+  <source src="C:\Users\ADMIN\OneDrive\Documents\Web technology\Lab 4\videopani.ogg" type="video/ogg">
+  Your browser does not support HTML video.
+</video>
+<BR><BR><BR>
+
+</center>
+
+<div class="mus" style="text-align:right"> 
+  <button onclick="playPause()">Play/Pause</button> 
+  <button onclick="makeBig()">Big</button>
+  <button onclick="makeSmall()">Small</button>
+  <button onclick="makeNormal()">Normal</button>
+  <br><br>
+  <video id="video1" width="420" align="center">
+    <source src="C:\Users\ADMIN\OneDrive\Documents\Web technology\Lab 4\videodilko.mp4" type="video/mp4">
+    <source src="C:\Users\ADMIN\OneDrive\Documents\Web technology\Lab 4\videodilko.ogg" type="video/ogg">
+    Your browser does not support HTML video.
+  </video> 
+
+</div>
+
+
+
+<script> 
+var myVideo = document.getElementById("video1"); 
+
+function playPause() { 
+  if (myVideo.paused) 
+    myVideo.play(); 
+  else 
+    myVideo.pause(); 
+} 
+
+function makeBig() { 
+    myVideo.width = 560; 
+} 
+
+function makeSmall() { 
+    myVideo.width = 320; 
+} 
+
+function makeNormal() { 
+    myVideo.width = 420; 
+} 
+</script> 
+
+<button onclick="getLocation()" style="color:red">Click Here</button>
+<h2 style="color:red">Click the button to get your coordinates.</h2>
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+
 <form action="https://www.musicstores.in/">
-
-  <h3><label for="fname">First name:</label>
-  <input type="text" id="fname" name="fname"><br><br>
-  <label for="lname">Last name:</label>
-  <input type="text" id="lname" name="lname"><br>
-
-  <h3><label for="email"><b>Email:</b></label>
-  <input type="text" name="email"><br><br>
-  <label for="psw"><b>Password:</b></label>
-  <input type="password" name="psw"><br></h3>
-
-  <label for="birthday">Birthday:</label><br>
-  <input type="date" id="birthday" name="birthday"><br><br></h3>
-  <h2>CATEGORIES</h2>
-  <input type="radio" id="keyboards" name="categories" value="KEYBOARDS">
-  <label for="keyboards">KEYBOARDS</label><br>
-  <input type="radio" id="pianos" name="categories" value="PIANOS">
-  <label for="pianos">PIANOS</label><br>
-  <input type="radio" id="guitars" name="categories" value="GUITARS">
-  <label for="guitars">GUITARS</label><br>
-  <input type="radio" id="drums" name="categories" value="DRUMS">
-  <label for="drums">DRUMS</label><br><br>
-  <h2>TOP BRANDS</h2>
-  <input type="checkbox" id="brand" name="Brand" value="Yamaha">
-  <label for="brand">Yamaha</label><br>
-  <input type="checkbox" id="brand" name="Brand" value="Boss">
-  <label for="brand">Boss</label><br>
-  <input type="checkbox" id="brand" name="Brand" value="Korg">
-  <label for="brand">Korg</label><br>
-  <input type="checkbox" id="brand" name="Brand" value="Hercules">
-  <label for="brand">Hercules</label><br>
-
-  <button name="button" value="view all" type="button" onclick="window.location.href ='https://www.musicstores.in/brands';">View All</button>  
-
   <h2>OUR COMPANY</h2>
   <label for="select">select:</label>
   <select id="our company" name="our company" onChange="window.location.href=this.value">
@@ -73,9 +125,9 @@
   </select><br><br>
   <a href="https://www.musicstores.in/contact-us">For any query contact us</a><br><br>
   <input type="submit" value="Submit">
-</form> 
-
+</form>
 <p style="color:purple;">If you click the "Submit" button, the page will redirect to "https://www.musicstores.in/"</p>
+
 
 </body>
 </html>
