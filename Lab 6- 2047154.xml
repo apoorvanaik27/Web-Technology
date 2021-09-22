@@ -1,1 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT bookstore (book+)>
+<!ELEMENT book (title,author,ISBN,publisher,edition,price)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT ISBN (#PCDATA)>
+<!ELEMENT publisher (#PCDATA)>
+<!ELEMENT edition (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
 
+
+
+
+
+
+
+
+
+
+
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="bookstore.xsl"?>
+<!DOCTYPE bookstore SYSTEM "bookstore.dtd">
+<bookstore>
+<book>
+  <title>Everyday Italian</title>
+  <author>Giada De Laurentiis</author>
+  <year>2005</year>
+  <price>65.00</price>
+</book>
+<book>
+  <title>Harry Potter</title>
+  <author>J K. Rowling</author>
+  <year>2005</year>
+  <price>40.99</price>
+</book>
+<book>
+  <title>Learning XML</title>
+  <author>Erik T. Ray</author>
+  <year>2003</year>
+  <price>39.95</price>
+</book>
+<book>
+  <title>War and Peace</title>
+  <author>Leo Tolstoy</author>
+  <year>1867</year>
+  <price>60.00</price>
+</book>
+<book>
+  <title>Song of Solomon</title>
+  <author>Toni Morrison</author>
+  <year>1977</year>
+  <price>80.00</price>
+</book>
+<book>
+  <title>The Shadow of the Wind</title>
+  <author>Carlos Ruiz Zafon</author>
+  <year>2001</year>
+  <price>30.00</price>
+</book>
+<book>
+  <title>The Lord of the Rings</title>
+  <author>J.R.R. Tolkien</author>
+  <year>1954</year>
+  <price>50.00</price>
+</book>
+<book>
+  <title>The Golden Compass</title>
+  <author>Philip Pullman</author>
+  <year>1995</year>
+  <price>20.00</price>
+</book>
+<book>
+  <title>The Kite Runner</title>
+  <author>Khaled Hosseini</author>
+  <year>2003</year>
+  <price>60.00</price>
+</book>
+<book>
+  <title>Little Women</title>
+  <author>Louisa May Alcott</author>
+  <year>1869</year>
+  <price>40.00</price>
+</book>
+
+</bookstore>
+
+
+
+
+
+
+
+
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template match="/">
+<html>
+<body>
+<h2> MY BOOKS COLLECTION </h2>
+<table border="1">
+<tr bgcolor="red">
+<th align="left">TITLE</th>
+<th align="left">AUTHOR</th>
+<th align="left">YEAR</th>
+<th align="left">PRICE</th>
+</tr>
+<xsl:for-each select="bookstore/book">
+<tr>
+<td><xsl:value-of select="title"/></td>
+<xsl:choose>
+<xsl:when test="price &gt; 50">
+<td bgcolor="yellow"><xsl:value-of select="author"/></td>
+</xsl:when>
+<xsl:when test="price &gt; 30">
+<td bgcolor="pink"><xsl:value-of select="author"/></td>
+</xsl:when>
+<xsl:otherwise>
+<td><xsl:value-of select="author"/></td>
+</xsl:otherwise>
+</xsl:choose>
+
+<td><xsl:value-of select="year"/></td>
+<td><xsl:value-of select="price"/></td>
+</tr>
+</xsl:for-each>
+</table>
+</body>
+</html>
+</xsl:template>
+</xsl:stylesheet>
