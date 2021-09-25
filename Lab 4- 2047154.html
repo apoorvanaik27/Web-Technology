@@ -6,9 +6,9 @@
 <body background="https://www.liveabout.com/thmb/pwO4o_iDrZRTmmhs7eOfD25Qoqw=/1500x1125/smart/filters:no_upscale()/pop-music-57bce3863df78c87634ea806.jpg">
 
 <form action="C:\Users\ADMIN\OneDrive\Documents\Web technology\Lab 4\Lab 4- 2047154.html" method="post">
-      	<h3><label for="email"><b>Email</b></label><br>
+      	<h3><label for="username/email"><b>Username/Email</b></label><br>
 
-     	<input type="text" name="email" required>	<br>
+     	<input type="text" name="username/email" required>	<br>
 	<label for="psw"><b>Password</b></label><br>
 	<input type="password" name="psw" required><br></h3>
 
@@ -21,13 +21,19 @@
 
 
 
-
 <!DOCTYPE html>
 <html>
 
 <STYLE>
 div.mus {
   padding-right: 85px;
+}
+.topser {
+  width: 40%;
+  font-size: 20px;
+  height: 30px;
+  align: center;
+  background-color: #e9e9e9;
 }
 </STYLE>
 
@@ -37,27 +43,34 @@ div.mus {
 <center>
 	
 <h1>MUSIC STORES</h1>
+<input type="text" name="" class="topser" value="" placeholder="Search Your Favourite Musical Instrument" align="center">
+  
+<details>
+        <summary><strong> Listen: Pani da rang...</strong></summary>
+        <img src="https://i.ytimg.com/vi/wPTXkEuMAGo/maxresdefault.jpg" width="400" height="250">
+        <figure>
+	<audio controls>
 	
-<audio controls>
   	<source src="C:\Users\ADMIN\OneDrive\Documents\Web technology\Lab 4\pani.ogg" type="audio/ogg">
   	<source src="C:\Users\ADMIN\OneDrive\Documents\Web technology\Lab 4\pani.mp3" type="audio/mpeg">
 	Your browser does not support the audio element.
 	</audio>
+ </figure>
+    </details>
 
-<embed type="image/jpg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyter7e_z9SpYOLrgdVJ09IdQ4vV3NYKlaXg&usqp=CAU" width="600" height="300" align="right">
-	
-<BR><BR>
+<embed type="image/jpg" src="https://media.wired.com/photos/60301ad14b4db703b8c6db1c/master/pass/Gear-Music-Apps-Subscrips-1141254399.jpg" width="600" height="300" align="right">
+
+</center>
+
+<BR><BR><BR>
 <video width="400" controls>
   <source src="C:\Users\ADMIN\OneDrive\Documents\Web technology\Lab 4\videopani.mp4" type="video/mp4">
   <source src="C:\Users\ADMIN\OneDrive\Documents\Web technology\Lab 4\videopani.ogg" type="video/ogg">
   Your browser does not support HTML video.
 </video>
 <BR><BR><BR>
-<button onclick="getLocation()" style="color:red">Click Here</button>
-<h2 style="color:red">Click the button to get your coordinates.</h2>
-</center>
 
-<BR><BR>
+
 
 <div class="mus" style="text-align:right"> 
   <button onclick="playPause()">Play/Pause</button> 
@@ -98,8 +111,10 @@ function makeNormal() {
 } 
 </script> 
 
+<HR>
 
-
+<h2 style="color:red">Click the button to get your coordinates.</h2>
+<button onclick="getLocation()" style="color:black">Click Here</button>
 <p id="demo"></p>
 
 <script>
@@ -118,6 +133,22 @@ function showPosition(position) {
   "<br>Longitude: " + position.coords.longitude;
 }
 </script>
+
+<HR>
+
+<form action="https://www.musicstores.in/">
+  <h2>OUR COMPANY</h2>
+  <label for="select">select:</label>
+  <select id="our company" name="our company" onChange="window.location.href=this.value">
+    <option value="https://www.musicstores.in/content/1-delivery"selected>Shipping & Returns</option>
+    <option value="https://www.musicstores.in/content/2-legal-notice">Privacy Policy</option>
+    <option value="https://www.musicstores.in/content/4-about-us">About Us</option>
+    <option value="https://www.musicstores.in/content/5-secure-payment">Payment Methods</option>
+  </select><br><br>
+  <h3><a href="https://www.musicstores.in/contact-us">For any query contact us</a></h3><br><br>
+  <input type="submit" value="Submit">
+</form>
+<h3><p style="color:purple;">If you click the "Submit" button, the page will redirect to "https://www.musicstores.in/"</p></h3>
 
 
 </body>
