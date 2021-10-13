@@ -1,0 +1,216 @@
+Resistration Form
+CAT 2- 2047154.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gateways 2021 Form</title>
+    <script defer src="script.js"></script>
+</head>
+<body background="https://iso.500px.com/wp-content/uploads/2016/03/stock-photo-142984111-1500x1000.jpg">
+<center>
+    <h1>GATEWAYS 2021</h1>
+    <div id="error"></div>
+    <form id="form" action="#" method="GET">
+        <div>
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required><br><br>
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required><br><br>
+        </div>
+        <div>
+            <label for="username">Username</label>
+     	    <input type="text" name="username" required><br><br>
+        <div>
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" required><br><br>
+        </div>
+        <div>
+            <label for="age">Age</label>
+            <input id="age" name="age" type="age" required><br><br>
+        </div>
+        <div>
+            <label for="state">State</label>
+            <input id="state" name="state" type="text" required><br><br>
+        </div>
+        <div>
+            <label for="phone">Phone Number</label>
+            <input id="phone" name="phone" type="number" required><br><br>
+        </div>
+        <div>
+            <label for="college/university name">College/University name</label>
+            <input id="college/university name" name="college/university name" type="text" required><br><br>
+        </div>
+        <div>
+            <label for="birthdaytime">Birthday (date and time)</label>
+            <input type="datetime-local" id="birthdaytime" name="birthdaytime" required><br><br>
+        </div>
+        <div>
+            <label for="gender">Select the gender</label><br>
+            <input type="radio" id="male" name="gender" value="male">
+              <label for="male">Male</label><br>
+              <input type="radio" id="female" name="gender" value="female">
+              <label for="female">Female</label><br><br>
+        </div>
+        <div>
+            <label for="branch">Branch</label>
+
+            <select id="branch">
+            <option value="msc">MSC Computer Science</option>
+            <option value="mca">Master of Computer Application</option>
+            <option value="mds">Master of Data Science</option>
+	    <option value="msc">MSC Mathematics</option>
+            </select><br><br>
+        </div>
+        <div>
+            <label for="address">Address</label>
+            <textarea id="address" rows="4" cols="50" name="address" form="form" required></textarea><br><br>
+        </div>
+        <button type="submit" id="submit">Submit</button>
+    </form>
+</center>
+</body>
+</html>
+
+
+
+
+
+
+script.js
+
+const name = document.getElementById('name')
+const pass = document.getElementById('password')
+const form = document.getElementById('form')
+const feed = document.getElementById('address')
+const email = document.getElementById('email')
+const date = document.getElementById('date')
+const submit = document.getElementById('submit')
+var date_regex = /^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[01])\/(19|20)\d{2}$/;
+const errorElement = document.getElementById('error')
+
+form.addEventListener('submit', (e) =>{
+    let message = []
+    if (name.value === '' || name.value == null ) {
+        message.push('Name is required')
+    }
+    if (feed.value === '' || feed.value == null ) {
+        message.push('Please provide us your address')
+    }
+    if(pass.value.length <= 8) {
+        message.push('Password must be longer than 8 characters')
+    }
+    if(pass.value.length >= 20) {
+        message.push('Password must be less than 20 characters')
+    }
+    if(pass.value === 'password') {
+        message.push('Password cannot be password')
+    }
+    if(message.length > 0) {
+        e.preventDefault()
+        errorElement.innerText = message.join(' , ')
+    }
+    if (!(date_regex.test(date))) {
+        message.push('Wrong Date, Please enetr again!')
+    }
+    
+    if(submit.checked==false)
+         {
+         alert("plz check the checkbox field");
+         document.getElementbyId("submit").focus();
+         return false;
+         }
+    
+})
+
+
+
+
+
+
+
+christ.xml
+
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="CHRIST.xsl"?>
+
+<CHRIST>
+<CS>
+<STU-NAME>Apoorva Naik </STU-NAME>
+<STU-BRANCH>MSC Computer Science</STU-BRANCH>
+<STU-COLLEGE>Christ Univeristy</STU-COLLEGE>
+<STU-EMAIL>apoorva@gmail.com</STU-EMAIL>  
+</CS>
+
+<CS>
+<STU-NAME>Nida</STU-NAME>
+<STU-BRANCH>MCA</STU-BRANCH>
+<STU-COLLEGE>Christ Univeristy</STU-COLLEGE>
+<STU-EMAIL>nida@gmail.com</STU-EMAIL>  
+</CS>
+
+<CS>
+<STU-NAME>Sneha</STU-NAME>
+<STU-BRANCH>MDS</STU-BRANCH>
+<STU-COLLEGE>Christ Univeristy</STU-COLLEGE>
+<STU-EMAIL>sneha@gmail.com</STU-EMAIL>  
+</CS>
+
+
+</CHRIST>
+
+
+
+
+
+
+
+christ.xsl
+
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template match="/">
+<html>
+
+ <style>
+         table, th, td {
+          border: 10px solid purple;
+          text-align:center;
+          
+          }
+         th, td {
+         padding: 25px;
+         background-color:none;
+         
+       }
+</style>
+
+<body>
+<center>
+<h1>GATEWAYS 2021</h1>
+<table cellspacing="5" width="50%">
+<tr bgcolor="cyan">
+<th>STU-NAME</th>
+<th>STU-BRANCH</th>
+<th>STU-COLLEGE</th>
+<th>STU-EMAIL</th>
+</tr>
+<xsl:for-each select="CHRIST/CS">
+<tr>
+<td bgcolor="yellow"><xsl:value-of select="STU-NAME"/></td>
+<td bgcolor="pink"><xsl:value-of select="STU-BRANCH"/></td>
+<td bgcolor="green"><xsl:value-of select="STU-COLLEGE"/></td>
+<td bgcolor="orange"><xsl:value-of select="STU-EMAIL"/></td>
+
+</tr>
+</xsl:for-each>
+</table>
+</center>
+</body>
+</html>
+</xsl:template>
+</xsl:stylesheet>
