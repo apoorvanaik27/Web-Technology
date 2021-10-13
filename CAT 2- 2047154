@@ -85,46 +85,44 @@ CAT 2- 2047154.html
 script.js
 
 const name = document.getElementById('name')
+const phone = document.getElementById('phone')
 const pass = document.getElementById('password')
-const form = document.getElementById('form')
-const feed = document.getElementById('address')
-const email = document.getElementById('email')
-const date = document.getElementById('date')
+const age = document.getElementById('age')
+const username = document.getElementById('username')
 const submit = document.getElementById('submit')
-var date_regex = /^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[01])\/(19|20)\d{2}$/;
 const errorElement = document.getElementById('error')
 
 form.addEventListener('submit', (e) =>{
     let message = []
     if (name.value === '' || name.value == null ) {
-        message.push('Name is required')
+        alert("Name is required");
     }
-    if (feed.value === '' || feed.value == null ) {
-        message.push('Please provide us your address')
+    if(phone.value.length < 10) {
+        alert("Phone should be 10 digits");
+    }
+    if(phone.value.length > 10) {
+        alert("Phone should be 10 digits");
     }
     if(pass.value.length <= 8) {
-        message.push('Password must be longer than 8 characters')
+        alert("Password must be longer than 8 characters");
     }
     if(pass.value.length >= 20) {
-        message.push('Password must be less than 20 characters')
+        alert("Password must be less than 20 characters");
     }
     if(pass.value === 'password') {
-        message.push('Password cannot be password')
+        alert("Password cannot be password");
     }
-    if(message.length > 0) {
-        e.preventDefault()
-        errorElement.innerText = message.join(' , ')
+    if(Math.sign(age.value) < 0 ) {
+        alert("Age should not be Negative");
     }
-    if (!(date_regex.test(date))) {
-        message.push('Wrong Date, Please enetr again!')
+    if (regexp.test(username.value))
+    {
+      console.log("String's first character is uppercase");
+    } 
+    else
+    {
+      console.log("String's first character is not uppercase");
     }
-    
-    if(submit.checked==false)
-         {
-         alert("plz check the checkbox field");
-         document.getElementbyId("submit").focus();
-         return false;
-         }
     
 })
 
