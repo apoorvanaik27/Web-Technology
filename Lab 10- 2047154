@@ -1,0 +1,119 @@
+<?php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div id="error"></div>
+    <form id="form" action="#" method="GET">
+        <div>
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required>
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" required>
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required>
+        </div>
+        <div>
+            <label for="email">Add your URL</label>
+            <input id="url" name="url" type="url" required>
+        </div>
+        <div>
+            <label for="phone">Phone Number</label>
+            <input id="phone" name="phone" type="number" required>
+        </div>
+        <div>
+            <label for="birthdaytime">Birthday (date and time)</label>
+            <input type="datetime-local" id="birthdaytime" name="birthdaytime" required>
+        </div>
+        <div>
+            <label for="gender">Select the gender</label><br>
+            <input type="radio" id="male" name="gender" value="male">
+              <label for="male">Male</label><br>
+              <input type="radio" id="female" name="gender" value="female">
+              <label for="female">Female</label>
+        </div>
+        <div>
+            <label for="hobbies">Your Hobbies</label><br>
+            <input type="checkbox" id="sport" name="sport" value="sport">
+            <label for="sport"> Sport</label><br>
+            <input type="checkbox" id="painting" name="painting" value="painting">
+            <label for="painting"> painting</label><br>
+            <input type="checkbox" id="climbing" name="climbing" value="climbing">
+            <label for="climbing"> climbing</label>
+        </div>
+        <div>
+            <label for="course">Course</label>
+
+            <select id="course">
+            <option value="bca">BCA</option>
+            <option value="msc">Msc(CS)</option>
+            <option value="bba">BBA</option>
+            </select>
+        </div>
+        <div>
+            <label for="feedback">Feedback</label>
+            <textarea id="feedback" rows="4" cols="50" name="feedback" form="form" required></textarea>
+        </div>
+        <button type="submit" id="submit">Submit</button>
+    </form>
+</body>
+</html>
+
+
+
+
+
+const name = document.getElementById('name')
+const pass = document.getElementById('password')
+const form = document.getElementById('form')
+const feed = document.getElementById('feedback')
+const email = document.getElementById('email')
+const date = document.getElementById('date')
+const submit = document.getElementById('submit')
+var date_regex = /^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[01])\/(19|20)\d{2}$/;
+const errorElement = document.getElementById('error')
+
+form.addEventListener('submit', (e) =>{
+    let message = []
+    if (name.value === '' || name.value == null ) {
+        message.push('Name is required')
+    }
+    if (feed.value === '' || feed.value == null ) {
+        message.push('Please provide us your feedback')
+    }
+    if(pass.value.length <= 8) {
+        message.push('Password must be longer than 8 characters')
+    }
+    if(pass.value.length >= 20) {
+        message.push('Password must be less than 20 characters')
+    }
+    if(pass.value === 'password') {
+        message.push('Password cannot be password')
+    }
+    if(message.length > 0) {
+        e.preventDefault()
+        errorElement.innerText = message.join(' , ')
+    }
+    if (!(date_regex.test(date))) {
+        message.push('Wrong Date, Please enetr again!')
+    }
+    
+    if(submit.checked==false)
+         {
+         alert("plz check the checkbox field");
+         document.getElementbyId("submit").focus();
+         return false;
+         }
+    
+})
+?>
