@@ -1,3 +1,5 @@
+formtest.php
+
 <!DOCTYPE html>
 <head>
  <meta charset=UTF-8" />
@@ -233,6 +235,7 @@
 
 
 
+result.php
 
 <!DOCTYPE html>
 <html>
@@ -287,6 +290,7 @@
 
 
 
+style.css
 
 input[type=text], select {
     width: 100%;
