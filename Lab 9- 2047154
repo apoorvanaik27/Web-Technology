@@ -1,117 +1,328 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Validation</title>
-    <script defer src="script.js"></script>
+ <meta charset=UTF-8" />
+ 
+ <title>PHP QUIZ</title>
+ 
+ <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
+ 
 <body>
-    <div id="error"></div>
-    <form id="form" action="#" method="GET">
-        <div>
-            <label for="name">Name</label>
-            <input id="name" name="name" type="text" required>
-        </div>
-        <div>
-            <label for="password">Password</label>
-            <input id="password" name="password" type="password" required>
-        </div>
-        <div>
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" required>
-        </div>
-        <div>
-            <label for="email">Add your URL</label>
-            <input id="url" name="url" type="url" required>
-        </div>
-        <div>
-            <label for="phone">Phone Number</label>
-            <input id="phone" name="phone" type="number" required>
-        </div>
-        <div>
-            <label for="birthdaytime">Birthday (date and time)</label>
-            <input type="datetime-local" id="birthdaytime" name="birthdaytime" required>
-        </div>
-        <div>
-            <label for="gender">Select the gender</label><br>
-            <input type="radio" id="male" name="gender" value="male">
-              <label for="male">Male</label><br>
-              <input type="radio" id="female" name="gender" value="female">
-              <label for="female">Female</label>
-        </div>
-        <div>
-            <label for="hobbies">Your Hobbies</label><br>
-            <input type="checkbox" id="sport" name="sport" value="sport">
-            <label for="sport"> Sport</label><br>
-            <input type="checkbox" id="painting" name="painting" value="painting">
-            <label for="painting"> painting</label><br>
-            <input type="checkbox" id="climbing" name="climbing" value="climbing">
-            <label for="climbing"> climbing</label>
-        </div>
-        <div>
-            <label for="course">Course</label>
+ 
+<div class="card">
+ 
+ <h1>Online Test On PHP</h1>
+ 
+ <form action="result.php" method="post" id="quiz">
+ <div class="row">
+            <ol>
+                <li>
+                <div class="col">
+                <div class="form-group">
+                
+                    <h3>Which of the type of variables are sequences of characters, like 'PHP supports string operations.'?</h3>
+                    
+                    <div>
+                        <input type="text" name="question-1-answers" id="question-1-answers" placeholder="Type Answer Here..." />
+                    </div>
+                    </div>
+                    </div>
+                
+                </li>
+                
+                <li>
+                <div class="col">
+                <div class="form-group">
+                
+                    <h3>Which of the following magic constant of PHP returns function name?</h3>
+                    
+                    <div>
+                        <input name="question-2-answers[]" id="question-2-answers" placeholder="Type Answer Here..." type="text"/>
+                    </div>
+                    </div>
+                    </div>
+                
+                </li>
+                
+                <li>
+                <div class="col">
+                <div class="form-group">
+                
+                    <h3>Which of the function can be used to get an array in the reverse order?</h3>
+                    
+                    <div>
+                        <p>Upload Here :</p>
+                        <input type="file" name="question-f-answers" id="question-f-answers">
+                    </div>
+                    </div>
+                    </div>
+            
+                </li>
+                
+                <li>
+                <div class="col">
+                <div class="form-group">
+                
+                    <h3>Localhost IP is..</h3>
+                    
+                    <div>
+                        <input type="radio" name="question-3-answers" id="question-3-answers-A" value="A" />
+                        <label for="question-3-answers-A">A) 192.168.0.1</label>
+                    </div>
+                    
+                    <div>
+                        <input type="radio" name="question-3-answers" id="question-3-answers-B" value="B" />
+                        <label for="question-3-answers-B">B) 127.0.0.0</label>
+                    </div>
+                    
+                    <div>
+                        <input type="radio" name="question-3-answers" id="question-3-answers-C" value="C" />
+                        <label for="question-3-answers-C">C) 1080:80</label>
+                    </div>
+                    
+                    <div>
+                        <input type="radio" name="question-3-answers" id="question-3-answers-D" value="D" />
+                        <label for="question-3-answers-D">D) Any Other</label>
+                    </div>
+                    </div>
+                    </div>
+                
+                </li>
+                
+                <li>
+                <div class="col">
+                <div class="form-group">
+                
+                    <h3>Singly quoted strings are treated almost literally, whereas doubly quoted strings replace variables with their values as well as specially interpreting certain character sequences.</h3>
+                    
+                    <div>
+                        <input type="radio" name="question-4-answers" id="question-4-answers-A" value="A" />
+                        <label for="question-4-answers-A">A) true</label>
+                    </div>
+                    
+                    <div>
+                        <input type="radio" name="question-4-answers" id="question-4-answers-B" value="B" />
+                        <label for="question-4-answers-B">B) false</label>
+                    </div>
+                    </div>
+                    </div>
+                
+                </li>
 
-            <select id="course">
-            <option value="bca">BCA</option>
-            <option value="msc">Msc(CS)</option>
-            <option value="bba">BBA</option>
-            </select>
+                <li>
+                <div class="col">
+                <div class="form-group">
+                
+                    <h3>Which of the following is used to get cookies?</h3>
+                    
+                    <div>
+                        <input type="radio" name="question-5-answers" id="question-5-answers-A" value="A" />
+                        <label for="question-5-answers-A">A) getcookie() function</label>
+                    </div>
+                    
+                    <div>
+                        <input type="radio" name="question-5-answers" id="question-5-answers-B" value="B" />
+                        <label for="question-5-answers-B">B) $_COOKIE variable</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="question-5-answers" id="question-5-answers-B" value="C" />
+                        <label for="question-5-answers-C">C) isset() function</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="question-5-answers" id="question-5-answers-B" value="D" />
+                        <label for="question-5-answers-D">D) None of the above.</label>
+                    </div>
+                    </div>
+                    </div>
+                
+                </li>
+
+                <li>
+                <div class="col">
+                <div class="form-group">
+                
+                <h3>Which gives a string containing PHP script file name in which it is called?</h3>
+                
+                <div>
+                    <input type="text" name="question-6-answers" id="question-6-answers" placeholder="Type Answer Here..." />
+                </div>
+                </div>
+                </div>
+            
+            </li>
+
+            <li>
+                <div class="col">
+                <div class="form-group">
+                
+                    <h3>Which of the following is used to destroy the session?</h3>
+                    
+                    <div>
+                        <input type="radio" name="question-7-answers" id="question-7-answers-A" value="A" />
+                        <label for="question-7-answers-A">A) session_start() function</label>
+                    </div>
+                    
+                    <div>
+                        <input type="radio" name="question-7-answers" id="question-7-answers-B" value="B" />
+                        <label for="question-7-answers-B">B) $_SESSION[]</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="question-7-answers" id="question-7-answers-B" value="C" />
+                        <label for="question-7-answers-C">C) isset() function</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="question-7-answers" id="question-7-answers-B" value="D" />
+                        <label for="question-7-answers-D">D) session_destroy() function</label>
+                    </div>
+                </div>
+                </div>
+                
+                </li>
+
+                <li>
+                <div class="col">
+                <div class="form-group">
+                
+                <h3>PHP variables are case-sensitive?</h3>
+                
+                <div>
+                    <input type="text" name="question-8-answers" id="question-8-answers" placeholder="Type Answer Here..." />
+                </div>
+                </div>
+                </div>
+            
+                </li>
+
+                <li>
+                <div class="col">
+                <div class="form-group">
+                
+                <h3>What data type will PHP automatically convert the following variable to:? $aVariable = 99;</h3>
+                
+                <div>
+                    <input type="text" name="question-9-answers" id="question-9-answers" placeholder="Type Answer Here..." />
+                </div>
+
+                </div>
+                </div>
+            
+                </li>
+            
+            </ol>
+            <div class="col">
+            <input type="submit" value="Submit" class="submitbtn" />
+            </div>
         </div>
-        <div>
-            <label for="feedback">Feedback</label>
-            <textarea id="feedback" rows="4" cols="50" name="feedback" form="form" required></textarea>
-        </div>
-        <button type="submit" id="submit">Submit</button>
-    </form>
+ </form>
+ 
+ 
+ </div>
+ 
+ 
 </body>
+ 
 </html>
 
 
 
 
 
-const name = document.getElementById('name')
-const pass = document.getElementById('password')
-const form = document.getElementById('form')
-const feed = document.getElementById('feedback')
-const email = document.getElementById('email')
-const date = document.getElementById('date')
-const submit = document.getElementById('submit')
-var date_regex = /^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[01])\/(19|20)\d{2}$/;
-const errorElement = document.getElementById('error')
 
-form.addEventListener('submit', (e) =>{
-    let message = []
-    if (name.value === '' || name.value == null ) {
-        message.push('Name is required')
-    }
-    if (feed.value === '' || feed.value == null ) {
-        message.push('Please provide us your feedback')
-    }
-    if(pass.value.length <= 8) {
-        message.push('Password must be longer than 8 characters')
-    }
-    if(pass.value.length >= 20) {
-        message.push('Password must be less than 20 characters')
-    }
-    if(pass.value === 'password') {
-        message.push('Password cannot be password')
-    }
-    if(message.length > 0) {
-        e.preventDefault()
-        errorElement.innerText = message.join(' , ')
-    }
-    if (!(date_regex.test(date))) {
-        message.push('Wrong Date, Please enetr again!')
-    }
-    
-    if(submit.checked==false)
-         {
-         alert("plz check the checkbox field");
-         document.getElementbyId("submit").focus();
-         return false;
-         }
-    
-})
+
+
+<!DOCTYPE html>
+<html>
+ 
+<head>
+<meta charset=UTF-8" />
+<title>PHP Quiz</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+ 
+<body>
+ 
+<div id="page-wrap">
+ 
+<h1>Result : </h1>
+        <?php
+            
+            $answer1 = $_POST['question-1-answers'];
+            $answer2 = $_POST['question-2-answers'];
+            $answer3 = $_POST['question-3-answers'];
+            $answer4 = $_POST['question-4-answers'];
+            $answer5 = $_POST['question-5-answers'];
+            $answer6 = $_POST['question-6-answers'];
+            $answer7 = $_POST['question-7-answers'];
+            $answer8 = $_POST['question-8-answers'];
+            $answer9 = $_POST['question-9-answers'];
+        
+            $totalCorrect = 0;
+            
+            if ($answer1 == "Strings") { $totalCorrect++; }
+            if ($answer2 == "_FUNCTION_") { $totalCorrect++; }
+            if ($answer3 == "B") { $totalCorrect++; }
+            if ($answer4 == "A") { $totalCorrect++; }
+            if ($answer5 == "B") { $totalCorrect++; }
+            if ($answer6 == "_PHP_SELF") { $totalCorrect++; }
+            if ($answer7 == "D") { $totalCorrect++; }
+            if ($answer8 == "true") { $totalCorrect++; }
+            if ($answer8 == "integer") { $totalCorrect++; }
+            
+            echo "<div id='results'>$totalCorrect / 10 correct</div>";
+            
+        ?>
+</div>
+ 
+</body>
+ 
+</html>
+
+
+
+
+
+
+
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  input[type=submit] {
+    width: 100%;
+    background-color: rgb(84, 105, 212);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  * {
+    padding: 0;
+    margin: 0;
+    color: #1a1f36;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Ubuntu,sans-serif;
+  }
